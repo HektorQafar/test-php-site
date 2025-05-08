@@ -83,7 +83,7 @@ Flight::route('GET /register', function() use ($db) { // rendering registration 
     Flight::render('register', $data);
 });
 
-Flight::route('POST /register', function() use ($db) { // registration logic
+Flight::route('POST /register', function() use ($db) { // registration logi
     $username = $_POST['username'];
     $stmt = $db->prepare('SELECT username FROM users WHERE username = :username');
     $stmt->bindValue(':username', $username);
